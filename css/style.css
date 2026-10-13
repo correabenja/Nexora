@@ -1,0 +1,189 @@
+/*Obsidian Black
+#0A0A0C
+Fondo principal de la web.
+
+Graphite
+#141418
+Tarjetas, menú y paneles.
+
+Steel Gray
+#24242B
+Bordes, separadores y estados hover.
+
+Platinum
+#E8E8EC
+Títulos y textos destacados.
+
+Silver Mist
+#A7A7B0
+Descripciones y textos secundarios.
+
+Champagne Gold
+#C6A96B
+Acento premium opcional.*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0A0A0C;
+    font-family: sans-serif;
+    margin: 0;
+}
+/*============
+    HEADER
+=============*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    color: #ffff;
+    background: linear-gradient(
+        180deg,
+        rgba(8, 8, 14, 0.58) 0%,
+        rgba(8, 8, 14, 0.12) 75%,
+        transparent 100%
+    );
+}
+
+/*=========== 
+    NAVBAR 
+============*/
+.nt-navbar {
+    position: relative;
+    width: 100%;
+    background: transparent;
+}
+.nt-navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 52px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*Navbar-left*/
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    gap: 10px;
+}
+.nav-left button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-toggler {
+    border: none !important;
+    background-color: transparent !important;
+    color: #ffff !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+/* texto menú */
+.nav-left > span {
+    color: #ffff;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: default;
+}
+.nt-navbar .navbar-collapse {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 1001;
+    min-width: 150px;
+    height: 490px;
+    padding: 15px;
+    color: #ffff;
+    background: transparent;
+    border: 1px solid var(--nx-border);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.28);
+}
+
+/* Enlaces */
+
+.nt-nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nt-nav-links .nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 13px 12px;
+    color: var(--nx-muted);
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 9px;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.nt-nav-links .nav-link:hover {
+    padding-left: 18px;
+    color: var(--nx-white);
+    background: rgba(155, 123, 255, 0.10);
+}
+
+.nt-nav-links .nav-link.active {
+    color: var(--nx-white);
+    background: rgba(155, 123, 255, 0.15);
+}
+
+.nt-nav-links .nav-link.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 2px;
+    height: 50%;
+    border-radius: 3px;
+    background: var(--nx-violet);
+}
+
+
+
+/*Navbar-center*/
+.nt-logo{
+    width: 90px;
+}
+/*Navbar-right*/
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid red;
+}
+.nav-right img{
+    width: 24px;
+}
+/*================
+    HERO
+=================*/
+.hero img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
